@@ -8,18 +8,19 @@ public_folder: "/images/uploads"
 collections:
   - name: "pages"
     label: "Pages"
-
     files:
       - label: "Home Page"
         name: "home"
         file: "index.html"
-
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
+          - label: "Page Content"
+            name: "body"
+            widget: "markdown"
 
       - label: "About Page"
         name: "about"
         file: "pages/about.html"
-
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
+          - label: "Page Content"
+            name: "body"
+            widget: "markdown"
