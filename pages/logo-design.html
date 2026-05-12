@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logo Designing & Video Editing – Mediobytes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="particle-canvas"></canvas>
+<div id="back-to-top" title="Back to top">↑</div>
+<div class="page-transition-overlay" id="pageTransition"></div>
+<header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text"
+            >Medio<span class="logo-red">bytes</span></span
+          ></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link active"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="career.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="career.html">Careers</a
+      ><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>/</span
+        ><a href="services.html">Services</a><span>/</span>Logo Designing
+      </div>
+      <span class="ph-tag">Service</span>
+      <h1>Logo & <span class="red">Video Creation</span></h1>
+      <p>
+        Your logo and visual media are the face of your brand — the first things people see and the
+        last things they forget. We craft logos and videos that are timeless, engaging, and
+        unmistakably yours.
+      </p>
+    </section>
+
+    <section class="srv-detail">
+      <div class="srv-2col">
+        <div>
+          <span class="sec-tag" style="padding-left: 0">The Process</span>
+          <h2>Branding & Media That <span class="red">Define You</span></h2>
+          <p>
+            We don't just draw logos or edit clips — we build brand identities and stories. Our process
+            begins with understanding your business, values, and audience. From
+            there we develop concepts, refine them through collaboration, and
+            deliver final assets ready for any use case.
+          </p>
+          <p>
+            Every logo we design comes with full source files in vector format,
+            and every video is delivered in high resolution, ensuring your brand looks sharp anywhere.
+          </p>
+          <a href="contact.html" class="btn-border" style="margin-top: 10px"
+            >Start Your Brand</a
+          >
+          <div class="srv-category">
+            <h5>What's Included</h5>
+            <div class="srv-tags">
+              <span class="srv-tag">Logo Design</span>
+              <span class="srv-tag">Video Editing</span>
+              <span class="srv-tag">Business Card Design</span>
+              <span class="srv-tag">Typography Guide</span>
+              <span class="srv-tag">Social Media Kit</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="feat-list">
+            <li>Brand discovery and strategy session</li>
+            <li>3 unique initial logo concepts</li>
+            <li>Unlimited revisions until satisfied</li>
+            <li>Dark and light background versions</li>
+            <li>Favicon version included</li>
+            <li>Brand colour palette guide</li>
+            <li>Typography recommendation</li>
+            <li>Full copyright ownership transferred</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 40px">
+        <span class="sec-tag">Why It Matters</span>
+        <h2 class="sec-h2">
+          Benefits of <span class="red">Professional Branding</span>
+        </h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="ben-card reveal" data-delay="0">
+          <div class="ben-icon">🧠</div>
+          <h4>Instant Recognition</h4>
+          <p>
+            A great logo makes your brand recognisable at a glance, even without
+            your company name.
+          </p>
+        </div>
+        <div class="ben-card reveal" data-delay="80">
+          <div class="ben-icon">💎</div>
+          <h4>Perceived Value</h4>
+          <p>
+            Professional branding signals quality and elevates how customers
+            perceive your business.
+          </p>
+        </div>
+        <div class="ben-card reveal" data-delay="160">
+          <div class="ben-icon">📐</div>
+          <h4>Versatile Use</h4>
+          <p>
+            Vector files ensure your logo looks crisp on everything — print,
+            digital, merchandise.
+          </p>
+        </div>
+        <div class="ben-card reveal" data-delay="240">
+          <div class="ben-icon">🏆</div>
+          <h4>Competitive Edge</h4>
+          <p>
+            Stand out from competitors with a unique visual identity that
+            customers remember.
+          </p>
+        </div>
+        <div class="ben-card reveal" data-delay="320">
+          <div class="ben-icon">🤝</div>
+          <h4>Build Trust</h4>
+          <p>
+            Consistent, professional branding builds credibility and earns
+            customer confidence.
+          </p>
+        </div>
+        <div class="ben-card reveal" data-delay="400">
+          <div class="ben-icon">🎯</div>
+          <h4>Audience Fit</h4>
+          <p>
+            We design with your specific audience in mind to ensure your brand
+            resonates deeply.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATION CALCULATOR -->
+    <section class="est-section" id="estimation">
+      <div style="text-align: center; margin-bottom: 50px">
+        <span class="sec-tag">Transparent Pricing</span>
+        <h2 class="sec-h2">Get Your <span class="red">Logo & Video Estimate</span></h2>
+        <p
+          style="
+            color: var(--mid-text);
+            font-size: 14px;
+            margin-top: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+          "
+        >
+          Select your package and required add-ons. Your estimated price updates
+          instantly — no hidden charges.
+        </p>
+      </div>
+
+      <div class="est-box">
+        <div class="est-step">
+          <h4>Step 1 — Select Package</h4>
+          <div class="type-grid">
+            <div class="type-btn" data-type="basic">
+              <span class="type-name">Basic</span>
+              <span class="type-sub">Simple logo only</span>
+              <span class="type-price">₹2,500</span>
+            </div>
+            <div class="type-btn" data-type="standard">
+              <span class="type-name">Standard</span>
+              <span class="type-sub">Logo + brand kit</span>
+              <span class="type-price">₹4,000</span>
+            </div>
+            <div class="type-btn" data-type="premium">
+              <span class="type-name">Premium</span>
+              <span class="type-sub">Full identity</span>
+              <span class="type-price">₹7,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="est-step">
+          <h4>Step 2 — Add-On Options</h4>
+          <div class="addon-grid">
+            <div class="addon-row" data-addon="Extra Logo Concepts ">
+              <input type="checkbox" id="lec" /><label
+                class="addon-lbl"
+                for="lec"
+                >Extra Logo Concepts (+2)</label
+              ><span class="addon-price">+₹1,000</span>
+            </div>
+            <div class="addon-row" data-addon="business card Design">
+              <input type="checkbox" id="lbc" /><label
+                class="addon-lbl"
+                for="lbc"
+                >Business Card Design</label
+              ><span class="addon-price">+₹1,500</span>
+            </div>
+            <div class="addon-row" data-addon="letterhead Design">
+              <input type="checkbox" id="llh" /><label
+                class="addon-lbl"
+                for="llh"
+                >Letterhead Design</label
+              ><span class="addon-price">+₹1,000</span>
+            </div>
+            <div class="addon-row" data-addon="brand Style guide">
+              <input type="checkbox" id="lbg" /><label
+                class="addon-lbl"
+                for="lbg"
+                >Brand Style Guide</label
+              ><span class="addon-price">+₹2,500</span>
+            </div>
+            <div class="addon-row" data-addon="basic Video Editing">
+              <input type="checkbox" id="lve" /><label
+                class="addon-lbl"
+                for="lve"
+                >Basic Video Editing</label
+              ><span class="addon-price">+₹2,000</span>
+            </div>
+            <div class="addon-row" data-addon="advanced Video Editing">
+              <input type="checkbox" id="lave" /><label
+                class="addon-lbl"
+                for="lave"
+                >Advanced Video Editing</label
+              ><span class="addon-price">+₹5,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-display">
+          <div class="price-lbl">Your Estimated Total</div>
+          <div class="price-val" id="priceVal">₹0</div>
+          <div class="price-brkd" id="priceBrkd">
+            👆 Select a package to begin
+          </div>
+          <div class="price-cta">
+            <a href="contact.html" class="btn-red">Get Exact Quote</a>
+            <a href="contact.html" class="btn-border">Contact Us</a>
+          </div>
+
+          <div class="consultation-section">
+            <button type="button" class="btn-purple free-consult-btn">
+              📞 Free Consultation
+            </button>
+            <div class="consult-contact" style="display: none">
+              <div class="contact-row">
+                <div>
+                  <p class="contact-label">Phone</p>
+                  <strong class="consult-phone"></strong>
+                </div>
+                <button type="button" class="copy-btn" data-copy-target="phone">
+                  Copy
+                </button>
+              </div>
+              <div class="contact-row">
+                <div>
+                  <p class="contact-label">Email</p>
+                  <strong class="consult-email"></strong>
+                </div>
+                <button type="button" class="copy-btn" data-copy-target="email">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Ready to Define Your <span class="red">Brand?</span></h2>
+        <p>
+          Let's create a logo that tells your story and grows with your
+          business.
+        </p>
+        <a href="contact.html" class="btn-white">Start Your Brand Journey</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >Medio<span class="logo-red">bytes</span></span
+            ></a
+          >
+          <p>We craft powerful digital experiences.</p>
+          <div class="socials">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="career.html">Careers</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mediobytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+  <script src="../js/enhancements.js"></script>
+  <script src="../js/chatbot.js"></script>
+  </body>
+</html>

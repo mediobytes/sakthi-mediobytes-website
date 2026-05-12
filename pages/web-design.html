@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Designing – Mediobytes</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+
+  <body>
+    <div id="scroll-progress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="particle-canvas"></canvas>
+<div id="back-to-top" title="Back to top">↑</div>
+<div class="page-transition-overlay" id="pageTransition"></div>
+<header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html">
+          <span class="logo-text"
+            >Medio<span class="logo-red">bytes</span></span
+          >
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link active">
+              Services <span class="drop-arrow">▾</span>
+            </a>
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        Web Designing
+      </div>
+
+      <span class="ph-tag">Service</span>
+
+      <h1>Web <span class="red">Designing</span></h1>
+
+      <p>
+        We design and develop high-performance websites that look stunning, load
+        fast, and convert visitors into loyal customers. Every pixel is
+        intentional, every line of code is optimised.
+      </p>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="srv-detail">
+      <div class="srv-2col">
+        <!-- LEFT -->
+        <div>
+          <span class="sec-tag" style="padding-left: 0">What We Offer</span>
+
+          <h2>
+            Everything You Need for a <span class="red">Powerful Website</span>
+          </h2>
+
+          <p>
+            We handle everything from initial design concepts to final
+            deployment — UI/UX design, front-end development, back-end
+            integration, and ongoing maintenance, all under one roof.
+          </p>
+
+          <p>
+            Every website we build is mobile-first, fast-loading, and designed
+            to make your business look credible and professional from day one.
+          </p>
+
+          <a href="contact.html" class="btn-border" style="margin-top: 12px">
+            Discuss Your Project
+          </a>
+
+          <!-- SERVICES TAGS -->
+          <div class="srv-category">
+            <h5>Website Services</h5>
+
+            <div class="srv-tags">
+              <span class="srv-tag">Website Creation</span>
+              <span class="srv-tag">Website Design</span>
+              <span class="srv-tag">Page Setup</span>
+              <span class="srv-tag">Website Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+          <ul class="feat-list">
+            <li>Custom responsive design (mobile, tablet, desktop)</li>
+            <li>Professional UI/UX wireframing &amp; prototyping</li>
+            <li>HTML5, CSS3, and modern JavaScript development</li>
+            <li>Contact forms and lead capture systems</li>
+            <li>Speed and performance optimisation</li>
+            <li>Cross-browser and cross-device testing</li>
+            <li>Domain &amp; hosting guidance and setup</li>
+            <li>30-day post-launch support included</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BENEFITS -->
+      <div style="text-align: center; margin-bottom: 40px">
+        <span class="sec-tag">Why It Matters</span>
+        <h2 class="sec-h2">
+          Benefits of a <span class="red">Professional Website</span>
+        </h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="ben-card reveal" data-delay="0">
+          <div class="ben-icon">⚡</div>
+          <h4>Lightning Fast</h4>
+          <p>
+            Optimised code ensures your site loads quickly — keeping visitors
+            engaged and reducing bounce rate.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="80">
+          <div class="ben-icon">📱</div>
+          <h4>Mobile-First</h4>
+          <p>
+            70%+ of traffic is mobile. Your site will look and work perfectly on
+            every screen size.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="160">
+          <div class="ben-icon">💼</div>
+          <h4>Brand Credibility</h4>
+          <p>
+            A polished website builds instant trust and makes your business look
+            established and professional.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="240">
+          <div class="ben-icon">📈</div>
+          <h4>Higher Conversions</h4>
+          <p>
+            Strategic layouts and CTAs guide visitors to take action and become
+            paying customers.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="320">
+          <div class="ben-icon">🛡️</div>
+          <h4>Secure &amp; Reliable</h4>
+          <p>
+            Secure code practices and ongoing support mean your site is always
+            safe and live.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="400">
+          <div class="ben-icon">🔧</div>
+          <h4>Easy Maintenance</h4>
+          <p>
+            We build websites that are easy to update, scale, and maintain as
+            your business grows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATION -->
+    <section class="est-section" id="estimation">
+      <div style="text-align: center; margin-bottom: 50px">
+        <span class="sec-tag">Transparent Pricing</span>
+
+        <h2 class="sec-h2">
+          Get Your <span class="red">Project Estimate</span>
+        </h2>
+
+        <p
+          style="
+            color: var(--gray);
+            font-size: 14px;
+            margin-top: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+          "
+        >
+          Select your project size and required features. Your estimated price
+          updates instantly below — no hidden charges, ever.
+        </p>
+      </div>
+
+      <div class="est-box">
+        <div class="est-step">
+          <h4>Step 1 — Select Project Size</h4>
+
+          <div class="type-grid">
+            <div class="type-btn" data-type="small">
+              <span class="type-name">Small</span>
+              <span class="type-sub">1 – 5 pages</span>
+              <span class="type-price">₹4,000</span>
+            </div>
+
+            <div class="type-btn" data-type="medium">
+              <span class="type-name">Medium</span>
+              <span class="type-sub">5 – 10 pages</span>
+              <span class="type-price">₹7,000</span>
+            </div>
+
+            <div class="type-btn" data-type="large">
+              <span class="type-name">Large</span>
+              <span class="type-sub">15+ pages</span>
+              <span class="type-price">₹15,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="est-step">
+          <h4>Step 2 — Select Add-On Features</h4>
+
+          <div class="addon-grid">
+            <div class="addon-row" data-addon="extra-pages">
+              <input type="checkbox" id="ep" />
+              <label class="addon-lbl" for="ep">Extra Pages</label>
+              <span class="addon-price">+₹500</span>
+            </div>
+
+            <div class="addon-row" data-addon="database">
+              <input type="checkbox" id="db" />
+              <label class="addon-lbl" for="db">Database Storage</label>
+              <span class="addon-price">+₹2,000</span>
+            </div>
+
+            <div class="addon-row" data-addon="email-notification">
+              <input type="checkbox" id="en" />
+              <label class="addon-lbl" for="en">Email Notification</label>
+              <span class="addon-price">+₹1000</span>
+            </div>
+
+            <div class="addon-row" data-addon="sms-notification">
+              <input type="checkbox" id="sn" />
+              <label class="addon-lbl" for="sn">SMS / Phone Notification</label>
+              <span class="addon-price">+₹2,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-display">
+          <div class="price-lbl">Your Estimated Total</div>
+          <div class="price-val" id="priceVal">₹0</div>
+          <div class="price-brkd" id="priceBrkd">
+            👆 Select a project size to begin
+          </div>
+
+          <div class="price-cta">
+            <a href="contact.html" class="btn-red">Get Exact Quote</a>
+            <a href="contact.html" class="btn-border">Contact Us</a>
+          </div>
+
+          <div class="consultation-section">
+            <button type="button" class="btn-purple free-consult-btn">
+              📞 Free Consultation
+            </button>
+            <div class="consult-contact" style="display: none">
+              <div class="contact-row">
+                <div>
+                  <p class="contact-label">Phone</p>
+                  <strong class="consult-phone"></strong>
+                </div>
+                <button type="button" class="copy-btn" data-copy-target="phone">
+                  Copy
+                </button>
+              </div>
+              <div class="contact-row">
+                <div>
+                  <p class="contact-label">Email</p>
+                  <strong class="consult-email"></strong>
+                </div>
+                <button type="button" class="copy-btn" data-copy-target="email">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Ready to Launch Your <span class="red">Website?</span></h2>
+        <p>
+          Let's discuss your project. We'll guide you from concept to launch.
+        </p>
+        <a href="contact.html" class="btn-white">Start Now</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html">
+            <span class="logo-text"
+              >Medio<span class="logo-red">bytes</span></span
+            >
+          </a>
+
+          <p style="margin-top: 15px">We craft powerful digital experiences.</p>
+
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a>
+            <a href="#" class="soc">fb</a>
+            <a href="#" class="soc">tw</a>
+            <a href="#" class="soc">ig</a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a>
+          <a href="logo-design.html">Logo Designing</a>
+          <a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Mediobytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+  <script src="../js/enhancements.js"></script>
+  <script src="../js/chatbot.js"></script>
+  </body>
+</html>

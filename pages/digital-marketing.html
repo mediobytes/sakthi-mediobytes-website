@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Marketing – Mediobytes</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+
+  <body>
+    <div id="scroll-progress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="particle-canvas"></canvas>
+<div id="back-to-top" title="Back to top">↑</div>
+<div class="page-transition-overlay" id="pageTransition"></div>
+<header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html">
+          <span class="logo-text"
+            >Medio<span class="logo-red">bytes</span></span
+          >
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link active">
+              Services <span class="drop-arrow">▾</span>
+            </a>
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="career.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="career.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        Digital Marketing
+      </div>
+
+      <span class="ph-tag">Service</span>
+
+      <h1>Digital <span class="red">Marketing</span></h1>
+
+      <p>
+        Growth doesn't happen by accident. Our data-driven digital marketing
+        strategies put your brand in front of the right people at the right time
+        — driving traffic, leads, and revenue.
+      </p>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="srv-detail">
+      <div class="srv-2col">
+        <!-- LEFT -->
+        <div>
+          <span class="sec-tag" style="padding-left: 0"
+            >Full-Funnel Strategy</span
+          >
+
+          <h2>Marketing That <span class="red">Drives Results</span></h2>
+
+          <p>
+            We combine creativity with analytics to build campaigns that don't
+            just look good — they perform. From organic search to paid
+            advertising, we cover every channel your customers use.
+          </p>
+
+          <p>
+            Every campaign is tracked, analysed, and optimised continuously.
+            You'll always know exactly what's working and what we're doing about
+            it.
+          </p>
+
+          <a href="contact.html" class="btn-border" style="margin-top: 10px">
+            Let's Grow Together
+          </a>
+
+          <div class="srv-category">
+            <h5>Services Included</h5>
+
+            <div class="srv-tags">
+              <span class="srv-tag">Advertising Campaigns</span>
+              <span class="srv-tag">Social Media Marketing</span>
+              <span class="srv-tag">Google Advertising</span>
+              <span class="srv-tag">Lead Generation</span>
+              <span class="srv-tag">Performance Marketing</span>
+              <span class="srv-tag">Analytics &amp; Reporting</span>
+              <span class="srv-tag">Branding &amp; Awareness</span>
+              <span class="srv-tag">Business Growth Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+          <ul class="feat-list">
+            <li>Meta Ads (Lead Generation, Display Ads, Shopping Ads)</li>
+            <li>Google Ads (Search, Display, Shopping)</li>
+            <li>Social Media Marketing (Instagram, Facebook)</li>
+            <li>Content creation and copywriting</li>
+            <li>Email marketing campaigns</li>
+            <li>WhatsApp marketing automation</li>
+            <li>Monthly performance reports</li>
+            <li>Competitor analysis and tracking</li>
+            <li>Landing page design for campaigns</li>
+            <li>Strategy consultation included</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BENEFITS -->
+      <div style="text-align: center; margin-bottom: 40px">
+        <span class="sec-tag">Why It Matters</span>
+        <h2 class="sec-h2">
+          Benefits of <span class="red">Digital Marketing</span>
+        </h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="ben-card reveal" data-delay="0">
+          <div class="ben-icon">🎯</div>
+          <h4>Targeted Reach</h4>
+          <p>
+            Reach exactly the right audience based on demographics, interests,
+            and behaviour.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="80">
+          <div class="ben-icon">📊</div>
+          <h4>Measurable ROI</h4>
+          <p>
+            Track every click, conversion, and rupee spent — complete
+            transparency on results.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="160">
+          <div class="ben-icon">🚀</div>
+          <h4>Rapid Growth</h4>
+          <p>
+            Paid campaigns can drive qualified traffic and leads within days of
+            launch.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="240">
+          <div class="ben-icon">🔄</div>
+          <h4>Always-On Presence</h4>
+          <p>
+            Your brand stays visible 24/7 across search engines and social
+            platforms.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="320">
+          <div class="ben-icon">💰</div>
+          <h4>Cost-Effective</h4>
+          <p>
+            Digital ads offer better ROI than traditional advertising at a
+            fraction of the cost.
+          </p>
+        </div>
+
+        <div class="ben-card reveal" data-delay="400">
+          <div class="ben-icon">📱</div>
+          <h4>Multi-Channel</h4>
+          <p>
+            We manage all your channels consistently, creating a unified brand
+            experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATION -->
+    <section class="est-section" id="estimation">
+      <div style="text-align: center; margin-bottom: 50px">
+        <span class="sec-tag">Consultation</span>
+        <h2 class="sec-h2">
+          Digital Marketing <span class="red">Consultation</span>
+        </h2>
+        <p
+          style="
+            color: var(--gray);
+            font-size: 14px;
+            margin-top: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+          "
+        >
+          Marketing estimations are most accurate after a strategy discussion.
+          Book a free consultation and we will recommend the right plan for your
+          business.
+        </p>
+      </div>
+
+      <div class="est-box consult-only">
+        <p
+          style="
+            color: var(--mid-text);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+          "
+        >
+          We do not display an automated estimate for Digital Marketing because
+          every campaign is unique. Speak with our team to get a tailored quote.
+        </p>
+        <button type="button" class="btn-purple free-consult-btn">
+          📞 Get Free Consultation
+        </button>
+        <div class="consult-contact" style="display: none; margin-top: 24px">
+          <div class="contact-row">
+            <div>
+              <p class="contact-label">Phone</p>
+              <strong class="consult-phone"></strong>
+            </div>
+            <button type="button" class="copy-btn" data-copy-target="phone">
+              Copy
+            </button>
+          </div>
+          <div class="contact-row">
+            <div>
+              <p class="contact-label">Email</p>
+              <strong class="consult-email"></strong>
+            </div>
+            <button type="button" class="copy-btn" data-copy-target="email">
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Ready to <span class="red">Grow</span> Your Business?</h2>
+        <p>
+          Let's build a digital marketing strategy tailored to your goals and
+          budget.
+        </p>
+        <a href="contact.html" class="btn-white">Get Free Consultation</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html">
+            <span class="logo-text"
+              >Medio<span class="logo-red">bytes</span></span
+            >
+          </a>
+          <p>We craft powerful digital experiences.</p>
+
+          <div class="socials">
+            <a href="#" class="soc">in</a>
+            <a href="#" class="soc">fb</a>
+            <a href="#" class="soc">tw</a>
+            <a href="#" class="soc">ig</a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="career.html">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a>
+          <a href="logo-design.html">Logo Designing</a>
+          <a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Mediobytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+  <script src="../js/enhancements.js"></script>
+  <script src="../js/chatbot.js"></script>
+  </body>
+</html>

@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>MedioBytes – Digital Agency</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="pages/about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="pages/services.html" class="nav-link"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="pages/web-design.html">Web Designing</a>
+              <a href="pages/logo-design.html">Logo Designing</a>
+              <a href="pages/digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="pages/portfolio.html" class="nav-link">Portfolio</a></li>
+          <li>
+            <a href="pages/our-impact.html" class="nav-link">Our Impact</a>
+          </li>
+          <li><a href="pages/career.html" class="nav-link">Careers</a></li>
+          <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+        ✕
+      </button>
+      <a href="index.html">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/services.html">Services</a>
+      <a href="pages/web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="pages/logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="pages/digital-marketing.html" class="sub-link"
+        >↳ Digital Marketing</a
+      >
+      <a href="pages/portfolio.html">Portfolio</a>
+      <a href="pages/our-impact.html">Our Impact</a>
+      <a href="pages/career.html">Careers</a>
+      <a href="pages/contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="bg-layer" id="bg1"></div>
+      <div class="bg-layer" id="bg2"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="hero-tag">Digital Agency — Coimbatore</div>
+        <h1 class="hero-title">
+          <span class="small-text">WELCOME TO</span>
+          <span class="big-text">MedioBytes</span>
+        </h1>
+        <p>
+          Transforming ideas into powerful digital experiences — web design,
+          branding &amp; marketing that drives measurable growth for your
+          business.
+        </p>
+        <div class="hero-btns">
+          <a href="pages/services.html" class="btn-red">Explore Services</a>
+          <a href="pages/contact.html" class="btn-border">Get Free Quote</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-bar"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- TECH STRIP -->
+    <div class="tech-strip">
+      <div class="tech-strip-inner" id="techStrip">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+      <div class="bg-word">SERVICES</div>
+      <div
+        class="sec-tag"
+        style="display: flex; margin-bottom: 50px; justify-content: center"
+      >
+        What We Do
+      </div>
+      <div class="services-inner">
+        <div class="srv-left">
+          <h2>We Create <span class="red">Smart Digital</span> Solutions</h2>
+          <p>
+            From stunning websites to powerful brand identities and
+            growth-driven marketing — we deliver everything businesses need to
+            thrive in the digital world.
+          </p>
+          <a href="pages/services.html" class="btn-red">All Services →</a>
+        </div>
+        <div class="srv-right" id="srvRight">
+          <div class="service-card active" id="card-0">
+            <div class="card-num">01</div>
+            <div
+              class="card-thumb"
+              style="
+                background: linear-gradient(135deg, #0f172a, #1e3a8a, #020617);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 72px;
+              "
+            >
+              🖥️
+            </div>
+            <div class="card-body">
+              <h4>Web Designing</h4>
+              <p>
+                Modern, responsive websites built for performance, speed, and
+                conversion excellence.
+              </p>
+              <a
+                href="pages/our-impact.html?cat=web"
+                class="card-work-btn"
+                onclick="event.stopPropagation()"
+                >See Our Work →</a
+              >
+            </div>
+          </div>
+          <div class="service-card" id="card-1">
+            <div class="card-num">02</div>
+            <div
+              class="card-thumb"
+              style="
+                background: linear-gradient(135deg, #020617, #0369a1, #0f172a);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 72px;
+              "
+            >
+              ✦
+            </div>
+            <div class="card-body">
+              <h4>Logo Designing</h4>
+              <p>
+                Distinctive brand identities that communicate your vision at a
+                glance.
+              </p>
+              <a
+                href="pages/our-impact.html?cat=logo"
+                class="card-work-btn"
+                onclick="event.stopPropagation()"
+                >See Our Work →</a
+              >
+            </div>
+          </div>
+          <div class="service-card" id="card-2">
+            <div class="card-num">03</div>
+            <div
+              class="card-thumb"
+              style="
+                background: linear-gradient(135deg, #022c22, #0d9488, #042f2e);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 72px;
+              "
+            >
+              📈
+            </div>
+            <div class="card-body">
+              <h4>Digital Marketing</h4>
+              <p>
+                Data-driven strategies that amplify reach and grow your revenue
+                consistently.
+              </p>
+              <a
+                href="pages/our-impact.html?cat=marketing"
+                class="card-work-btn"
+                onclick="event.stopPropagation()"
+                >See Our Work →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="srv-dots">
+        <span class="dot active" onclick="goToCard(0)"></span>
+        <span class="dot" onclick="goToCard(1)"></span>
+        <span class="dot" onclick="goToCard(2)"></span>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="whyus-section reveal-sec">
+      <div class="whyus-left">
+        <div class="sec-tag" style="padding-left: 0">Why MedioBytes</div>
+        <h2>We Don't Just Deliver,<br />We <span class="red">Elevate</span></h2>
+        <p>
+          Every project is a statement of craftsmanship, strategy, and ambition.
+          We combine creativity with technology to produce results that matter
+          to your bottom line.
+        </p>
+        <a href="pages/about.html" class="btn-border">About Us</a>
+      </div>
+      <div class="whyus-right">
+        <div class="feature-row reveal" data-delay="0">
+          <div class="feat-dot"></div>
+          <div>
+            <h4>Client-First Approach</h4>
+            <p>
+              We listen before we build. Your goals drive every decision we
+              make.
+            </p>
+          </div>
+        </div>
+        <div class="feature-row reveal" data-delay="120">
+          <div class="feat-dot"></div>
+          <div>
+            <h4>On-Time Delivery</h4>
+            <p>
+              We respect your deadlines and deliver quality without compromise.
+            </p>
+          </div>
+        </div>
+        <div class="feature-row reveal" data-delay="240">
+          <div class="feat-dot"></div>
+          <div>
+            <h4>Post-Launch Support</h4>
+            <p>
+              Our relationship doesn't end at launch — we're here when you need
+              us.
+            </p>
+          </div>
+        </div>
+        <div class="feature-row reveal" data-delay="360">
+          <div class="feat-dot"></div>
+          <div>
+            <h4>Transparent Pricing</h4>
+            <p>No hidden costs. What we quote is what you pay — always.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="port-preview">
+      <div
+        class="sec-tag"
+        style="text-align: center; display: flex; justify-content: center"
+      >
+        Our Work
+      </div>
+      <h2 class="sec-h2" style="text-align: center">
+        Featured <span class="red">Projects</span>
+      </h2>
+      <p class="sec-sub">
+        A glimpse into our best work across web design, branding &amp; digital
+        marketing.
+      </p>
+      <div class="port-grid">
+        <div class="port-card reveal" data-delay="0">
+          <div
+            class="port-thumb"
+            style="
+              background: linear-gradient(135deg, #0f172a, #1e3a8a);
+              font-size: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            🌐
+            <div class="port-cover">
+              <span>Web Design</span>
+              <p>Business Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="port-card reveal" data-delay="120">
+          <div
+            class="port-thumb"
+            style="
+              background: linear-gradient(135deg, #020617, #0369a1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 54px;
+            "
+          >
+            ✦
+            <div class="port-cover">
+              <span>Logo Design</span>
+              <p>Brand Identity</p>
+            </div>
+          </div>
+        </div>
+        <div class="port-card reveal" data-delay="240">
+          <div
+            class="port-thumb"
+            style="
+              background: linear-gradient(135deg, #022c22, #0d9488);
+              font-size: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            📊
+            <div class="port-cover">
+              <span>Digital Marketing</span>
+              <p>Growth Campaign</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 44px">
+        <a href="pages/portfolio.html" class="btn-border">View All Work</a>
+      </div>
+    </section>
+
+    <!-- OUR IMPACT / WORK DONE -->
+    <section class="impact-section" id="impact">
+      <div class="bg-word">IMPACT</div>
+      <div class="impact-header">
+        <div class="sec-tag" style="justify-content: center">Work Done</div>
+        <h2 class="sec-h2">Our <span class="red">Impact</span> in Numbers</h2>
+        <p class="sec-sub">
+          Every project tells a story. Here's what we've delivered across our
+          journey — real results for real clients.
+        </p>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="impact-stats">
+        <div class="istat reveal" data-delay="0">
+          <div class="istat-num" data-target="10">0</div>
+          <div class="istat-plus">+</div>
+          <div class="istat-label">Projects Completed</div>
+        </div>
+        <div class="istat reveal" data-delay="100">
+          <div class="istat-num" data-target="8">0</div>
+          <div class="istat-plus">+</div>
+          <div class="istat-label">Happy Clients</div>
+        </div>
+        <div class="istat reveal" data-delay="200">
+          <div class="istat-num" data-target="1">0</div>
+          <div class="istat-plus">+</div>
+          <div class="istat-label">Years of Excellence</div>
+        </div>
+        <div class="istat reveal" data-delay="300">
+          <div class="istat-num" data-target="98">0</div>
+          <div class="istat-plus">%</div>
+          <div class="istat-label">Client Satisfaction</div>
+        </div>
+      </div>
+
+      <!-- Tab Filter -->
+      <div class="work-tabs">
+        <button class="wtab active" data-cat="all">All Work</button>
+        <button class="wtab" data-cat="web">Web Design</button>
+        <button class="wtab" data-cat="logo">Logo & Brand</button>
+        <button class="wtab" data-cat="marketing">Digital Marketing</button>
+      </div>
+
+      <!-- Work Cards Grid -->
+      <div class="work-grid" id="workGrid">
+        <div class="work-card reveal" data-delay="0" data-cat="web">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #0c1a10, #14532d, #0a0f0b);
+            "
+          >
+            <span class="work-emoji">🏢</span>
+            <div class="work-overlay">
+              <span class="work-tag">Web Design</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Corporate Business Site</h4>
+            <p>
+              Multi-page corporate website with CMS integration, and lead
+              capture forms.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="100" data-cat="logo">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #020617, #7c3aed, #0f172a);
+            "
+          >
+            <span class="work-emoji">✦</span>
+            <div class="work-overlay">
+              <span class="work-tag">Logo & Brand</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Corporate Brand Identity</h4>
+            <p>
+              Complete brand package — logo, colour palette, typography guide,
+              and brand usage guidelines.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="200" data-cat="logo">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #2d1b00, #d97706, #1c1100);
+            "
+          >
+            <span class="work-emoji">☕</span>
+            <div class="work-overlay">
+              <span class="work-tag">Logo & Brand</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Green Technology</h4>
+            <p>
+              Modern rebrand for a local café chain — new logo, signage system,
+              and packaging design.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="100" data-cat="logo">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #1a0a2e, #db2777, #0d0a1f);
+            "
+          >
+            <span class="work-emoji">💄</span>
+            <div class="work-overlay">
+              <span class="work-tag">Logo & Brand</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Beauty Brand Identity</h4>
+            <p>
+              Elegant logo and full brand identity for a premium beauty &
+              skincare startup.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="200" data-cat="marketing">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #1a0a2e, #6d28d9, #0d0a1f);
+            "
+          >
+            <span class="work-emoji">📈</span>
+            <div class="work-overlay">
+              <span class="work-tag">Digital Marketing</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Meta Ads – 33 Leads in 4 Days</h4>
+            <p>
+              Real campaign results: 33 form leads at ₹46.81 CPL with just
+              ₹400/day budget.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="300" data-cat="marketing">
+          <div
+            class="work-thumb"
+            style="
+              background: linear-gradient(135deg, #0f172a, #0d9488, #1e3a8a);
+            "
+          >
+            <span class="work-emoji">🎓</span>
+            <div class="work-overlay">
+              <span class="work-tag">Digital Marketing</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h4>Makeup Institute – ₹1.5L Revenue in 2 Days</h4>
+            <p>
+              High-impact digital launch campaign delivering fast revenue and
+              strong audience growth.
+            </p>
+            <div class="work-meta">
+              <span>📅 2026</span
+              ><span class="work-done-badge">✓ Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section class="career-section" id="careers">
+      <div style="text-align: center; margin-bottom: 56px">
+        <div
+          class="sec-tag"
+          style="display: inline-flex; justify-content: center"
+        >
+          Join Our Team
+        </div>
+        <h2 class="sec-h2">Open <span class="red">Positions</span></h2>
+        <p class="sec-sub" style="margin-bottom: 0">
+          We're growing and looking for talented people to join the MedioBytes
+          family.
+        </p>
+      </div>
+      <div class="career-grid">
+        <div class="career-card reveal" data-delay="0">
+          <div class="career-icon">🎨</div>
+          <div class="career-role">UI/UX Designer</div>
+          <div class="career-dept">Design Department</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Create intuitive, beautiful user interfaces</li>
+            <li>Wireframing, prototyping &amp; design systems</li>
+            <li>Experience with Figma / Adobe XD</li>
+            <li>Portfolio of web/app UI projects required</li>
+          </ul>
+          <a href="pages/apply.html?role=UI%2FOUX+Designer" class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+        <div class="career-card reveal" data-delay="120">
+          <div class="career-icon">💻</div>
+          <div class="career-role">Web Developer</div>
+          <div class="career-dept">Development Department</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Build responsive websites &amp; web apps</li>
+            <li>HTML, CSS, JavaScript proficiency</li>
+            <li>React / Node.js knowledge preferred</li>
+            <li>Strong eye for design &amp; detail</li>
+          </ul>
+          <a href="pages/apply.html?role=Web+Developer" class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+        <div class="career-card reveal" data-delay="240">
+          <div class="career-icon">📊</div>
+          <div class="career-role">Digital Marketing Executive</div>
+          <div class="career-dept">Marketing Department</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Manage social media &amp; ad campaigns</li>
+            <li>Google Ads &amp; Meta Ads experience</li>
+            <li>Analytics, reporting &amp; optimization</li>
+            <li>Content creation skills a plus</li>
+          </ul>
+          <a
+            href="pages/apply.html?role=Digital+Marketing+Executive"
+            class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div class="bg-word">CLIENTS</div>
+      <div class="sec-tag" style="display: flex; justify-content: center">
+        Happy Clients
+      </div>
+      <h2 class="sec-h2" style="text-align: center">
+        What Our <span class="red">Clients Say</span>
+      </h2>
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testiTrack">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>
+          Ready to Build Something <span class="red">Extraordinary?</span>
+        </h2>
+        <p>
+          Let's turn your idea into a powerful digital reality. Get a free
+          estimation today.
+        </p>
+        <a href="pages/contact.html" class="btn-white">Start Your Project</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
+
+    <script src="js/cms-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

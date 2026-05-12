@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply – Medio bytes Careers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text">XE<span class="logo-red">VON</span></span></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="career.html" class="nav-link active">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="career.html">Careers</a
+      ><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO -->
+    <section class="apply-hero">
+      <div class="breadcrumb" style="position: relative; z-index: 1">
+        <a href="../index.html">Home</a><span>/</span>
+        <a href="career.html">Careers</a><span>/</span>Apply
+      </div>
+      <h1 style="position: relative; z-index: 1">
+        Apply for a <span class="red">Position</span>
+      </h1>
+      <p style="position: relative; z-index: 1">
+        Fill in your details below and upload your resume. We review every
+        application personally and get back to you within 3–5 working days.
+      </p>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="section-pad" style="background: var(--bg)">
+      <div class="apply-form-wrap" style="padding: 0">
+
+        <div class="apply-form-box">
+          <h2>Job Application</h2>
+          <p>
+            All fields marked * are required. Please attach your resume in PDF
+            or Word format.
+          </p>
+          <div class="job-badge" id="jobBadge">Position: Loading...</div>
+
+          <form id="applyForm" novalidate enctype="multipart/form-data">
+            <input type="hidden" id="roleField" name="role" value="" />
+
+            <div class="fg-row">
+              <div class="fg">
+                <label for="fullName">Full Name *</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Your full name"
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="fg">
+                <label for="applyEmail">Email Address *</label>
+                <input
+                  type="email"
+                  id="applyEmail"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="fg-row">
+              <div class="fg">
+                <label for="applyPhone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="applyPhone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                />
+              </div>
+              <div class="fg">
+                <label for="applyRole">Position Applying For *</label>
+                <select id="applyRole" name="applyRole" required>
+                  <option value="">Select a position...</option>
+                  <option value="UI/UX Designer">UI/UX Designer</option>
+                  <option value="Web Developer">Web Developer</option>
+                  <option value="Digital Marketing Executive">
+                    Digital Marketing Executive
+                  </option>
+                  <option value="General Application">
+                    General Application
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="fg-row">
+              <div class="fg">
+                <label for="experience">Experience Level</label>
+                <select id="experience" name="experience">
+                  <option value="fresher">Fresher / Recent Graduate</option>
+                  <option value="0-1">Less than 1 year</option>
+                  <option value="1-2">1 – 2 years</option>
+                  <option value="2-4">2 – 4 years</option>
+                  <option value="4+">4+ years</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="portfolio">Portfolio / LinkedIn URL</label>
+                <input
+                  type="url"
+                  id="portfolio"
+                  name="portfolio"
+                  placeholder="https://yourportfolio.com"
+                />
+              </div>
+            </div>
+
+            <div class="fg">
+              <label for="coverLetter">Cover Letter / Why Medio bytes? *</label>
+              <textarea
+                id="coverLetter"
+                name="coverLetter"
+                placeholder="Tell us about yourself, your skills, and why you want to join Mediobytes. What makes you a great fit for this role?"
+                required
+                minlength="30"
+              ></textarea>
+            </div>
+
+            <div class="fg">
+              <label for="resume">Upload Resume / CV *</label>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+              <p
+                style="
+                  font-size: 11px;
+                  color: var(--light-text);
+                  margin-top: 6px;
+                "
+              >
+                Accepted formats: PDF, DOC, DOCX. Max size: 5MB
+              </p>
+            </div>
+
+            <!-- Honeypot -->
+            <div style="display: none">
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <button type="submit" class="submit-btn" id="applySubmitBtn">
+              Submit Application →
+            </button>
+            <div class="form-ok" id="applyOk">
+              ✅ Application submitted! We'll review your profile and get back
+              to you within 3–5 working days. Check your email for a
+              confirmation.
+            </div>
+            <div class="form-err" id="applyErr"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS INFO -->
+    <section class="section-pad" style="background: var(--bg3)">
+      <div style="text-align: center; margin-bottom: 44px">
+        <span class="sec-tag">What Happens Next</span>
+        <h2 class="sec-h2">Our Hiring <span class="red">Process</span></h2>
+      </div>
+      <div class="grid-res-4" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+
+        <div style="padding: 24px 16px">
+          <div
+            style="
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              background: var(--grad-red);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-family: var(--display);
+              font-weight: 900;
+              font-size: 16px;
+              margin: 0 auto 14px;
+            "
+          >
+            1
+          </div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Apply
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text)">
+            Submit your application with resume
+          </p>
+        </div>
+        <div style="padding: 24px 16px">
+          <div
+            style="
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              background: var(--grad-purple);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-family: var(--display);
+              font-weight: 900;
+              font-size: 16px;
+              margin: 0 auto 14px;
+            "
+          >
+            2
+          </div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Review
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text)">
+            We review your profile within 3–5 days
+          </p>
+        </div>
+        <div style="padding: 24px 16px">
+          <div
+            style="
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              background: var(--grad-red);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-family: var(--display);
+              font-weight: 900;
+              font-size: 16px;
+              margin: 0 auto 14px;
+            "
+          >
+            3
+          </div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Interview
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text)">
+            Online or in-person interview call
+          </p>
+        </div>
+        <div style="padding: 24px 16px">
+          <div
+            style="
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              background: var(--grad-purple);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-family: var(--display);
+              font-weight: 900;
+              font-size: 16px;
+              margin: 0 auto 14px;
+            "
+          >
+            4
+          </div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Welcome
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text)">
+            Offer letter &amp; onboarding
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >XE<span class="logo-red">VON</span></span
+            ></a
+          >
+          <p style="margin-top: 15px">We craft powerful digital experiences.</p>
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="career.html">Careers</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Medio bytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+      // Pre-fill role from URL parameter
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const role = params.get("role") || "";
+        const decoded = decodeURIComponent(role);
+
+        // Set badge
+        const badge = document.getElementById("jobBadge");
+        if (badge)
+          badge.textContent = decoded
+            ? "Applying for: " + decoded
+            : "General Application";
+
+        // Set hidden field
+        const roleField = document.getElementById("roleField");
+        if (roleField) roleField.value = decoded;
+
+        // Pre-select dropdown
+        const select = document.getElementById("applyRole");
+        if (select && decoded) {
+          for (let opt of select.options) {
+            if (
+              opt.value
+                .toLowerCase()
+                .includes(decoded.toLowerCase().split("+")[0])
+            ) {
+              opt.selected = true;
+              break;
+            }
+          }
+          // Exact match
+          for (let opt of select.options) {
+            if (opt.value === decoded) {
+              opt.selected = true;
+              break;
+            }
+          }
+        }
+      });
+
+      // Application form submit
+      document
+        .getElementById("applyForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const btn = document.getElementById("applySubmitBtn");
+          const ok = document.getElementById("applyOk");
+          const err = document.getElementById("applyErr");
+
+          // Client validation
+          const name = document.getElementById("fullName").value.trim();
+          const email = document.getElementById("applyEmail").value.trim();
+          const phone = document.getElementById("applyPhone").value.trim();
+          const letter = document.getElementById("coverLetter").value.trim();
+          const resume = document.getElementById("resume").files[0];
+          const role = document.getElementById("applyRole").value;
+
+          if (!name || name.length < 2) {
+            showErr(err, "Please enter your full name.");
+            return;
+          }
+          if (!email || !/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+            showErr(err, "Please enter a valid email.");
+            return;
+          }
+          if (!phone) {
+            showErr(err, "Please enter your phone number.");
+            return;
+          }
+          if (!role) {
+            showErr(err, "Please select the position you are applying for.");
+            return;
+          }
+          if (!letter || letter.length < 30) {
+            showErr(
+              err,
+              "Please write a short cover letter (at least 30 characters).",
+            );
+            return;
+          }
+          if (!resume) {
+            showErr(err, "Please upload your resume (PDF or Word).");
+            return;
+          }
+          if (resume.size > 5 * 1024 * 1024) {
+            showErr(err, "Resume file must be under 5MB.");
+            return;
+          }
+
+          err.style.display = "none";
+          btn.textContent = "Submitting...";
+          btn.disabled = true;
+
+          const services = window.CMS?.services || {};
+          const endpoint = services.getformEndpoint;
+
+          if (!endpoint || endpoint.includes("placeholder")) {
+            showErr(err, "Form submission is not configured. Please add your Getform.io endpoint in cms-data.js.");
+            btn.textContent = "Submit Application →";
+            btn.disabled = false;
+            return;
+          }
+
+          try {
+            // Map fields to Forminit block keys
+            const mappedData = new FormData();
+            mappedData.append("fi-sender-fullName", name);
+            mappedData.append("fi-sender-email", email);
+            mappedData.append("fi-text-phone", phone);
+            mappedData.append("fi-text-role", role);
+            mappedData.append("fi-text-experience", document.getElementById("experience").value);
+            mappedData.append("fi-text-portfolio", document.getElementById("portfolio").value);
+            mappedData.append("fi-text-message", letter);
+            mappedData.append("resume", resume); // File often doesn't need prefix, but we'll see
+
+            const res = await fetch(endpoint, {
+              method: "POST",
+              body: mappedData,
+              headers: {
+                "Accept": "application/json"
+              }
+            });
+
+            if (res.ok) {
+              if (ok) ok.style.display = "block";
+              this.reset();
+              btn.textContent = "Application Sent ✓";
+              btn.style.background = "linear-gradient(135deg,#1a7a3a,#1a5a2a)";
+              window.scrollTo({ top: btn.offsetTop - 200, behavior: "smooth" });
+            } else {
+              const errorData = await res.json().catch(() => ({}));
+              showErr(err, `Submission failed: ${errorData.message || res.status}. Check your file size or Getform setup.`);
+              btn.textContent = "Submit Application →";
+              btn.disabled = false;
+            }
+          } catch (e) {
+            showErr(
+              err,
+              `Error: ${e.message}. Please check your internet or email us directly at mediobytes@gmail.com`
+            );
+            btn.textContent = "Submit Application →";
+            btn.disabled = false;
+          }
+        });
+
+      function showErr(el, msg) {
+        if (!el) return;
+        el.textContent = "⚠️ " + msg;
+        el.style.display = "block";
+        el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    </script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Mediobytes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text"
+            >Medio<span class="logo-red">bytes</span></span
+          ></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li>
+            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <section
+      class="page-hero"
+      style="
+        background-image: url(&quot;../images/bg9.jpg&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>/</span>Portfolio
+      </div>
+      <span class="ph-tag">Our Work</span>
+      <h1>Projects We're <span class="red">Proud Of</span></h1>
+      <p>
+        Every project in our portfolio represents a real business challenge
+        solved with design, technology, and strategy. See the work that keeps
+        clients coming back.
+      </p>
+    </section>
+
+    <section class="section-pad" style="background: var(--black2); border-bottom: 1px solid rgba(255, 45, 45, 0.08);">
+      <div class="impact-grid grid-res-4">
+
+        <div>
+          <div class="impact-num">10+</div>
+          <div class="impact-lbl">Completed Projects</div>
+        </div>
+        <div>
+          <div class="impact-num">3x</div>
+          <div class="impact-lbl">Avg. Client ROI</div>
+        </div>
+        <div>
+          <div class="impact-num">8+</div>
+          <div class="impact-lbl">Happy Clients</div>
+        </div>
+        <div>
+          <div class="impact-num">3</div>
+          <div class="impact-lbl">Core Services</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO — 3 projects only -->
+    <section class="section-pad" style="background: var(--black)">
+      <div class="filter-row">
+        <button class="f-btn active" data-filter="all">All Work</button>
+        <button class="f-btn" data-filter="web">Web Design</button>
+        <button class="f-btn" data-filter="mkt">Digital Marketing</button>
+        <button class="f-btn" data-filter="logo">Logo Design</button>
+      </div>
+
+      <div class="port-main grid-res-3" style="max-width: 1100px; margin: 0 auto;">
+
+        <!-- Project 1: Web -->
+        <div class="pm-card reveal" data-delay="0" data-cat="web">
+          <div class="pm-thumb t-web">🌐</div>
+          <div class="pm-info">
+            <span class="pm-tag">Web Designing</span>
+            <h4>Business Website — Rangaraj</h4>
+            <p>
+              A fully responsive, high-performance business website built with
+              modern design principles. Resulted in measurable increase in
+              online inquiries and professional credibility for the client.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2: Digital Marketing -->
+        <div class="pm-card reveal" data-delay="120" data-cat="mkt">
+          <div class="pm-thumb t-mkt">📈</div>
+          <div class="pm-info">
+            <span class="pm-tag">Digital Marketing</span>
+            <h4>Growth Campaign — Siva</h4>
+            <p>
+              Working with Mediobytes, I was quickly impressed. The quality of
+              their work is excellent, and we got qualified leads.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3: Logo -->
+        <div class="pm-card reveal" data-delay="240" data-cat="logo">
+          <div class="pm-thumb t-logo">✦</div>
+          <div class="pm-info">
+            <span class="pm-tag">Logo Designing</span>
+            <h4>Brand Identity — NagaRani</h4>
+            <p>
+              Their pricing is also very reasonable. I’m really happy working
+              with Mediobytes and have recommended them to my friends to
+              collaborate with them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-pad" style="background: var(--black2)">
+      <div style="text-align: center; margin-bottom: 50px">
+        <span class="sec-tag">Client Words</span>
+        <h2 class="sec-h2">What Our <span class="red">Clients Say</span></h2>
+      </div>
+      <div class="grid-res-3" style="max-width: 1100px; margin: 0 auto;">
+
+        <div class="testi-card reveal" data-delay="0">
+          <div class="testi-quote">"</div>
+          <p>
+            Working with Mediobytes, I was quickly impressed. The quality of
+            their work is excellent, and we got qualified leads.
+          </p>
+          <div class="testi-name">Rangaraj</div>
+          <div class="testi-role">Business Owner</div>
+        </div>
+        <div class="testi-card reveal" data-delay="100">
+          <div class="testi-quote">"</div>
+          <p>
+            I really want to mention that the team is very friendly. I asked the
+            same doubts many times, and they always explained everything clearly
+            and patiently.
+          </p>
+          <div class="testi-name">Siva</div>
+          <div class="testi-role">Startup Founder</div>
+        </div>
+        <div class="testi-card reveal" data-delay="200">
+          <div class="testi-quote">"</div>
+          <p>
+            Their pricing is also very reasonable. I’m really happy working with
+            Mediobytes and have recommended them to my friends to collaborate
+            with them.
+          </p>
+          <div class="testi-name">NagaRani</div>
+          <div class="testi-role">Startup Founder</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Like What You <span class="red">See?</span></h2>
+        <p>Let's create something equally impressive for your business.</p>
+        <a href="contact.html" class="btn-white">Start Your Project</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >Medio<span class="logo-red">bytes</span></span
+            ></a
+          >
+          <p style="margin-top: 15px">We craft powerful digital experiences.</p>
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mediobytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>
+

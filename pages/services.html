@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – Medio bytes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text">XE<span class="logo-red">VON</span></span></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link active"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <section
+      class="page-hero"
+      style="
+        background-image: url(&quot;../images/bg10.jpg&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>/</span>Services
+      </div>
+      <span class="ph-tag">What We Offer</span>
+      <h1>Our <span class="red">Services</span></h1>
+      <p>
+        End-to-end digital solutions — from building your website to growing
+        your brand online. Everything you need, under one roof.
+      </p>
+    </section>
+
+    <section style="padding: 90px 80px; background: var(--black)">
+      <!-- WEB DESIGN -->
+      <div style="margin-bottom: 70px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+          "
+        >
+          <div>
+            <span class="sec-tag" style="padding-left: 0">Service 01</span>
+            <h2 class="sec-h2" style="text-align: left; margin-bottom: 18px">
+              Web <span class="red">Designing</span>
+            </h2>
+            <p
+              style="
+                color: var(--gray);
+                font-size: 14px;
+                line-height: 1.95;
+                margin-bottom: 24px;
+              "
+            >
+              We design and develop high-performance websites that look
+              stunning, load fast, and convert visitors into loyal customers.
+            </p>
+            <a href="web-design.html" class="btn-red"
+              >Explore &amp; Estimate →</a
+            >
+          </div>
+          <div>
+            <div class="srv-category">
+              <h5>Website Services</h5>
+              <div class="srv-tags">
+                <span class="srv-tag">Website Creation</span>
+                <span class="srv-tag">Website Design</span>
+                <span class="srv-tag">Page Setup</span>
+                <span class="srv-tag">Website Maintenance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="
+          border: none;
+          border-top: 1px solid rgba(255, 45, 45, 0.1);
+          margin: 0 0 70px 0;
+          max-width: 1200px;
+          margin: 0 auto 70px;
+        "
+      />
+
+      <!-- DIGITAL MARKETING -->
+      <div style="margin-bottom: 70px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+          "
+        >
+          <div>
+            <span class="sec-tag" style="padding-left: 0">Service 02</span>
+            <h2 class="sec-h2" style="text-align: left; margin-bottom: 18px">
+              Digital <span class="red">Marketing</span>
+            </h2>
+            <p
+              style="
+                color: var(--gray);
+                font-size: 14px;
+                line-height: 1.95;
+                margin-bottom: 24px;
+              "
+            >
+              Growth doesn't happen by accident. Our data-driven strategies put
+              your brand in front of the right people at the right time —
+              driving traffic, leads, and revenue.
+            </p>
+            <a href="digital-marketing.html" class="btn-red"
+              >Explore Service →</a
+            >
+          </div>
+          <div>
+            <div class="srv-category">
+              <h5>Digital Marketing Services</h5>
+              <div class="srv-tags">
+                <span class="srv-tag">Advertising Campaigns</span>
+                <span class="srv-tag">Social Media Marketing</span>
+                <span class="srv-tag">Google Advertising</span>
+                <span class="srv-tag">Lead Generation</span>
+                <span class="srv-tag">Performance Marketing</span>
+                <span class="srv-tag">Business Growth Strategy</span>
+                <span class="srv-tag">Analytics &amp; Reporting</span>
+                <span class="srv-tag">Branding &amp; Awareness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="
+          border: none;
+          border-top: 1px solid rgba(255, 45, 45, 0.1);
+          max-width: 1200px;
+          margin: 0 auto 70px;
+        "
+      />
+
+      <!-- LOGO DESIGN -->
+      <div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+          "
+        >
+          <div>
+            <span class="sec-tag" style="padding-left: 0">Service 03</span>
+            <h2 class="sec-h2" style="text-align: left; margin-bottom: 18px">
+              Logo <span class="red">Designing</span>
+            </h2>
+            <p
+              style="
+                color: var(--gray);
+                font-size: 14px;
+                line-height: 1.95;
+                margin-bottom: 24px;
+              "
+            >
+              Your logo is the face of your brand. We craft logos that are
+              timeless, versatile, and unmistakably yours — designed to
+              communicate your values at a glance.
+            </p>
+            <a href="logo-design.html" class="btn-red">Explore Service →</a>
+          </div>
+          <div>
+            <div class="srv-category">
+              <h5>Logo &amp; Branding</h5>
+              <div class="srv-tags">
+                <span class="srv-tag">Logo Design</span>
+                <span class="srv-tag">Brand Identity</span>
+                <span class="srv-tag">Business Card Design</span>
+                <span class="srv-tag">Colour Palette</span>
+                <span class="srv-tag">Typography Guide</span>
+                <span class="srv-tag">Social Media Kit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Not Sure What You <span class="red">Need?</span></h2>
+        <p>
+          Talk to our team — we'll help you find the right combination of
+          services for your goals and budget.
+        </p>
+        <a href="contact.html" class="btn-white">Talk to Us Free</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >XE<span class="logo-red">VON</span></span
+            ></a
+          >
+          <p style="margin-top: 15px">We craft powerful digital experiences.</p>
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Medio bytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>

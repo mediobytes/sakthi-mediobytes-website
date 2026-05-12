@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers – Medio bytes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text">XE<span class="logo-red">VON</span></span></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="career.html" class="nav-link active">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="career.html">Careers</a
+      ><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <section
+      class="page-hero"
+      style="
+        background-image: url(&quot;../images/bg6.jpg&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>/</span>Careers
+      </div>
+      <span class="ph-tag">Join Us</span>
+      <h1>Build Your Career at <span class="red">MedioBytes</span></h1>
+      <p>
+        We're a growing digital agency in Coimbatore looking for passionate,
+        talented people to join our team. If you love creating great work, we'd
+        love to hear from you.
+      </p>
+    </section>
+
+    <!-- WHY JOIN -->
+    <section class="section-pad" style="background: var(--bg3)">
+      <div style="text-align: center; margin-bottom: 50px">
+        <span class="sec-tag">Why Medio bytes</span>
+        <h2 class="sec-h2">Why Work <span class="red">With Us?</span></h2>
+      </div>
+      <div class="grid-res-4" style="max-width: 1100px; margin: 0 auto;">
+
+        <div
+          style="
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: center;
+            border: 1px solid rgba(124, 92, 191, 0.12);
+            transition: var(--ease);
+          "
+          class="reveal"
+          data-delay="0"
+        >
+          <div style="font-size: 36px; margin-bottom: 14px">🚀</div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Fast Growth
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text); line-height: 1.75">
+            Learn fast, grow fast. Real projects from day one.
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: center;
+            border: 1px solid rgba(124, 92, 191, 0.12);
+            transition: var(--ease);
+          "
+          class="reveal"
+          data-delay="80"
+        >
+          <div style="font-size: 36px; margin-bottom: 14px">🎨</div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Creative Freedom
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text); line-height: 1.75">
+            We value your ideas and give you room to innovate.
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: center;
+            border: 1px solid rgba(124, 92, 191, 0.12);
+            transition: var(--ease);
+          "
+          class="reveal"
+          data-delay="160"
+        >
+          <div style="font-size: 36px; margin-bottom: 14px">🤝</div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Great Culture
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text); line-height: 1.75">
+            Friendly team, open communication, and mutual respect.
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: center;
+            border: 1px solid rgba(124, 92, 191, 0.12);
+            transition: var(--ease);
+          "
+          class="reveal"
+          data-delay="240"
+        >
+          <div style="font-size: 36px; margin-bottom: 14px">💡</div>
+          <h4
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: var(--dark-text);
+            "
+          >
+            Skill Building
+          </h4>
+          <p style="font-size: 12px; color: var(--mid-text); line-height: 1.75">
+            Workshops, mentorship, and continuous learning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOB LISTINGS -->
+    <section class="career-section section-pad">
+      <div style="text-align: center; margin-bottom: 60px">
+        <span class="sec-tag">Open Roles</span>
+        <h2 class="sec-h2">Current <span class="red">Openings</span></h2>
+        <p class="sec-sub" style="margin-bottom: 0">
+          Apply now — positions fill quickly.
+        </p>
+      </div>
+
+      <div class="career-grid grid-res-3">
+
+        <div class="career-card reveal" data-delay="0">
+          <div class="career-icon">🎨</div>
+          <div class="career-role">UI/UX Designer</div>
+          <div class="career-dept">Design Department · Coimbatore</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Create intuitive, beautiful user interfaces</li>
+            <li>Wireframing, prototyping &amp; design systems</li>
+            <li>Experience with Figma / Adobe XD</li>
+            <li>Portfolio of web/app UI projects required</li>
+            <li>Freshers with strong portfolios welcome</li>
+          </ul>
+          <a href="apply.html?role=UI%2FOUX+Designer" class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+
+        <div class="career-card reveal" data-delay="120">
+          <div class="career-icon">💻</div>
+          <div class="career-role">Web Developer</div>
+          <div class="career-dept">Development Department · Coimbatore</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Build responsive websites &amp; web apps</li>
+            <li>HTML, CSS, JavaScript proficiency</li>
+            <li>React / Node.js knowledge preferred</li>
+            <li>Strong eye for design &amp; detail</li>
+            <li>1+ year experience or strong project work</li>
+          </ul>
+          <a href="apply.html?role=Web+Developer" class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+
+        <div class="career-card reveal" data-delay="240">
+          <div class="career-icon">📊</div>
+          <div class="career-role">Digital Marketing Executive</div>
+          <div class="career-dept">Marketing Department · Coimbatore</div>
+          <div class="career-status">✅ Vacancy Open</div>
+          <ul class="career-details">
+            <li>Manage social media &amp; ad campaigns</li>
+            <li>Google Ads &amp; Meta Ads experience</li>
+            <li>Analytics, reporting &amp; optimization</li>
+            <li>Content creation skills a plus</li>
+            <li>Freshers with certifications welcome</li>
+          </ul>
+          <a
+            href="apply.html?role=Digital+Marketing+Executive"
+            class="btn-purple"
+            >Apply Now →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2>Don't See Your <span class="red">Role?</span></h2>
+        <p>
+          Send us your resume anyway — we're always looking for great talent to
+          join our growing team.
+        </p>
+        <a href="apply.html?role=General+Application" class="btn-white"
+          >Send Open Application</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >XE<span class="logo-red">VON</span></span
+            ></a
+          >
+          <p style="margin-top: 15px">We craft powerful digital experiences.</p>
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="career.html">Careers</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Medio bytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Mediobytes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="back-to-top" title="Back to top">↑</div>
+    <div class="page-transition-overlay" id="pageTransition"></div>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="../index.html"
+          ><span class="logo-text"
+            >Medio<span class="logo-red">bytes</span></span
+          ></a
+        >
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="services.html" class="nav-link"
+              >Services <span class="drop-arrow">▾</span></a
+            >
+            <div class="dropdown">
+              <a href="web-design.html">Web Designing</a>
+              <a href="logo-design.html">Logo Designing</a>
+              <a href="digital-marketing.html">Digital Marketing</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index.html">Home</a><a href="about.html">About</a
+      ><a href="services.html">Services</a>
+      <a href="web-design.html" class="sub-link">↳ Web Designing</a>
+      <a href="logo-design.html" class="sub-link">↳ Logo Designing</a>
+      <a href="digital-marketing.html" class="sub-link">↳ Digital Marketing</a>
+      <a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <section
+      class="page-hero"
+      style="
+        background-image: url(&quot;../images/bg9.jpg&quot;);
+        background-attachment: fixed;
+        background-size: cover;
+      "
+    >
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>/</span>Contact
+      </div>
+      <span class="ph-tag">Get In Touch</span>
+      <h1>Let's Work <span class="red">Together</span></h1>
+      <p>
+        Have a project in mind? Fill out the form and we'll get back to you
+        within 24 hours — or reach us directly. We're always happy to talk.
+      </p>
+    </section>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="sec-tag" style="padding-left: 0">Reach Us</span>
+        <h2>We'd Love to <span class="red">Hear From You</span></h2>
+        <p>
+          Whether you're ready to start a project or just exploring options, our
+          team is here to help. Tell us about your goals and we'll build a plan
+          together.
+        </p>
+        <div class="c-detail">
+          <div class="c-ico">📧</div>
+          <div>
+            <h5>Email Us</h5>
+            <p>mediobytes@gmail.com</p>
+          </div>
+        </div>
+        <div class="c-detail">
+          <div class="c-ico">📞</div>
+          <div>
+            <h5>Call / WhatsApp</h5>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+        <div class="c-detail">
+          <div class="c-ico">📍</div>
+          <div>
+            <h5>Office Location</h5>
+            <p>Saravanampatti, Coimbatore,<br />Tamil Nadu – 641 035</p>
+          </div>
+        </div>
+        <div class="c-detail">
+          <div class="c-ico">🕒</div>
+          <div>
+            <h5>Working Hours</h5>
+            <p>Monday – Sunday<br />11:00 AM – 11:00 PM IST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Us a <span class="red">Message</span></h3>
+        <form id="contactForm" novalidate>
+          <div class="fg-row">
+            <div class="fg">
+              <label for="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+                minlength="2"
+              />
+            </div>
+            <div class="fg">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="fg">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+91 XXXXX XXXXX"
+              pattern="[0-9+\s\-]{7,15}"
+            />
+          </div>
+          <div class="fg">
+            <label for="requirement">Your Requirement *</label>
+            <textarea
+              id="requirement"
+              name="requirement"
+              placeholder="Describe your project, goals, budget, and timeline in detail..."
+              required
+              minlength="10"
+            ></textarea>
+          </div>
+          <div class="fg">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="web">Web Designing</option>
+              <option value="logo">Logo Designing</option>
+              <option value="marketing">Digital Marketing</option>
+              <option value="multiple">Multiple Services</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+
+          <!-- Dynamic Estimator -->
+          <div
+            id="dynamicEstimator"
+            style="
+              display: none;
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+              margin-top: 24px;
+              padding-top: 24px;
+              margin-bottom: 24px;
+            "
+          >
+            <h4
+              style="
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--red);
+                margin-bottom: 18px;
+              "
+            >
+              Instant Project Estimation
+            </h4>
+            <div class="est-step" style="margin-bottom: 24px">
+              <h4
+                style="
+                  font-size: 11px;
+                  margin-bottom: 12px;
+                  letter-spacing: 1px;
+                  color: var(--mid-text);
+                "
+              >
+                Select Package Size
+              </h4>
+              <div class="type-grid" id="dynTypeGrid"></div>
+            </div>
+            <div class="est-step" style="margin-bottom: 24px">
+              <h4
+                style="
+                  font-size: 11px;
+                  margin-bottom: 12px;
+                  letter-spacing: 1px;
+                  color: var(--mid-text);
+                "
+              >
+                Select Optional Add-ons
+              </h4>
+              <div class="addon-grid" id="dynAddonGrid"></div>
+            </div>
+            <div class="price-display" style="padding: 24px; margin-top: 24px">
+              <div class="price-lbl">Your Estimated Total</div>
+              <div class="price-val" id="priceVal">₹0</div>
+              <div class="price-brkd" id="priceBrkd">
+                👆 Select a package size to begin
+              </div>
+            </div>
+
+            <!-- Free Consultation Button for Web & Logo -->
+            <div
+              id="estimatorConsultation"
+              style="
+                display: none;
+                margin-top: 24px;
+                text-align: center;
+                padding-top: 24px;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+              "
+            >
+              <p
+                style="
+                  color: var(--mid-text);
+                  font-size: 13px;
+                  margin-bottom: 16px;
+                "
+              >
+                Want personalized guidance? Get a free consultation with our
+                experts.
+              </p>
+              <button
+                type="button"
+                class="btn-purple"
+                id="estimatorConsultBtn"
+                style="display: inline-flex; align-items: center; gap: 8px"
+              >
+                📞 Get Free Consultation
+              </button>
+              <div
+                id="consultationPhone"
+                style="
+                  margin-top: 16px;
+                  padding: 14px;
+                  background: rgba(14, 165, 233, 0.1);
+                  border-radius: 10px;
+                  display: none;
+                  border-left: 3px solid var(--purple-acc);
+                "
+              >
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 12px;
+                    "
+                  >
+                    <div>
+                      <p
+                        style="
+                          color: var(--dark-text);
+                          font-size: 12px;
+                          margin-bottom: 6px;
+                          font-weight: 500;
+                        "
+                      >
+                        Phone
+                      </p>
+                      <strong
+                        class="consult-phone"
+                        style="
+                          display: block;
+                          color: var(--red);
+                          font-size: 16px;
+                          font-weight: 700;
+                        "
+                        >+91 98765 43210</strong
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="copy-btn"
+                      data-copy-target="phone"
+                    >
+                      Copy
+                    </button>
+                  </div>
+
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 12px;
+                    "
+                  >
+                    <div>
+                      <p
+                        style="
+                          color: var(--dark-text);
+                          font-size: 12px;
+                          margin-bottom: 6px;
+                          font-weight: 500;
+                        "
+                      >
+                        Email
+                      </p>
+                      <strong
+                        class="consult-email"
+                        style="
+                          display: block;
+                          color: var(--dark-text);
+                          font-size: 14px;
+                          font-weight: 700;
+                        "
+                        >mediobytes@gmail.com</strong
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="copy-btn"
+                      data-copy-target="email"
+                    >
+                      Copy
+                    </button>
+                  </div>
+
+                  <p
+                    style="
+                      color: var(--mid-text);
+                      font-size: 11px;
+                      margin-top: 8px;
+                    "
+                  >
+                    Monday – Saturday, 9:00 AM – 7:00 PM IST
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Get Free Consultation Section (for Digital Marketing only) -->
+          <div
+            id="freeConsultation"
+            style="
+              display: none;
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+              margin-top: 24px;
+              padding-top: 24px;
+              margin-bottom: 24px;
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(37, 99, 235, 0.08) 0%,
+                  rgba(14, 165, 233, 0.08) 100%
+                );
+                border: 1px solid rgba(37, 99, 235, 0.22);
+                border-radius: 16px;
+                padding: 40px 30px;
+              "
+            >
+              <h4
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: var(--dark-text);
+                  margin-bottom: 12px;
+                "
+              >
+                Digital Marketing Strategy
+              </h4>
+              <p
+                style="
+                  color: var(--mid-text);
+                  font-size: 14px;
+                  line-height: 1.75;
+                  margin-bottom: 16px;
+                  max-width: 400px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                Every marketing strategy is unique. Let's discuss your goals,
+                target audience, and budget to create a customized plan for your
+                business.
+              </p>
+              <button
+                type="button"
+                class="btn-red"
+                id="marketingConsultBtn"
+                style="display: inline-flex; align-items: center; gap: 8px"
+              >
+                📞 Get Free Consultation
+              </button>
+              <div
+                id="marketingPhone"
+                class="consult-contact"
+                style="
+                  margin-top: 16px;
+                  padding: 14px;
+                  background: rgba(14, 165, 233, 0.1);
+                  border-radius: 10px;
+                  display: none;
+                  border-left: 3px solid var(--purple-acc);
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    align-items: flex-start;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      width: 100%;
+                      gap: 12px;
+                    "
+                  >
+                    <div>
+                      <p
+                        style="
+                          color: var(--dark-text);
+                          font-size: 12px;
+                          margin-bottom: 6px;
+                          font-weight: 500;
+                        "
+                      >
+                        Phone
+                      </p>
+                      <strong
+                        class="consult-phone"
+                        style="
+                          display: block;
+                          color: var(--red);
+                          font-size: 16px;
+                          font-weight: 700;
+                        "
+                        >+91 98765 43210</strong
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="copy-btn"
+                      data-copy-target="phone"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      width: 100%;
+                      gap: 12px;
+                    "
+                  >
+                    <div>
+                      <p
+                        style="
+                          color: var(--dark-text);
+                          font-size: 12px;
+                          margin-bottom: 6px;
+                          font-weight: 500;
+                        "
+                      >
+                        Email
+                      </p>
+                      <strong
+                        class="consult-email"
+                        style="
+                          display: block;
+                          color: var(--dark-text);
+                          font-size: 14px;
+                          font-weight: 700;
+                        "
+                        >mediobytes@gmail.com</strong
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="copy-btn"
+                      data-copy-target="email"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                  <p
+                    style="
+                      color: var(--mid-text);
+                      font-size: 11px;
+                      margin-top: 8px;
+                    "
+                  >
+                    Monday – Saturday, 9:00 AM – 7:00 PM IST
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden field to track consultation request -->
+          <input
+            type="hidden"
+            id="consultationRequested"
+            name="consultationRequested"
+            value="no"
+          />
+          <!-- Honeypot spam field (hidden) -->
+          <div style="display: none">
+            <input
+              type="text"
+              name="website"
+              id="honeypot"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Send Message
+          </button>
+          <div class="form-ok" id="formOk">
+            ✅ Thank you! Your message has been sent to mediobytes@gmail.com.
+            We'll get back to you within 24 hours.
+          </div>
+          <div class="form-err" id="formErr">
+            ❌ Something went wrong. Please try again or email us directly at
+            mediobytes@gmail.com
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MAP: Saravanampatti, Coimbatore -->
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62800.89797041!2d77.00!3d11.0625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857c9c5be2e11%3A0xe3c14fb9e7b6e4d7!2sSaravanampatti%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000001"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Medio bytes – Saravanampatti, Coimbatore"
+      >
+      </iframe>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="foot-brand">
+          <a href="../index.html"
+            ><span class="logo-text"
+              >Medio<span class="logo-red">bytes</span></span
+            ></a
+          >
+          <p style="margin-top: 15px">
+            We craft powerful digital experiences that elevate your brand.
+          </p>
+          <div class="socials" style="margin-top: 18px">
+            <a href="#" class="soc">in</a><a href="#" class="soc">fb</a
+            ><a href="#" class="soc">tw</a><a href="#" class="soc">ig</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Quick Links</h5>
+          <a href="../index.html">Home</a><a href="about.html">About</a
+          ><a href="services.html">Services</a
+          ><a href="portfolio.html">Portfolio</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Services</h5>
+          <a href="web-design.html">Web Designing</a
+          ><a href="logo-design.html">Logo Designing</a
+          ><a href="digital-marketing.html">Digital Marketing</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <p>📧 mediobytes@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Saravanampatti, Coimbatore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mediobytes. All Rights Reserved.</p>
+        <p>Designed with ❤️ in Coimbatore</p>
+      </div>
+    </footer>
+    <script src="../js/cms-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>
